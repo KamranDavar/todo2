@@ -8,21 +8,25 @@ export function Header() {
     return (
         <>
             <Menu onClick={(e) => setCurrent(e.key)} selectedKeys={[current]} mode="horizontal">
-                <Menu.Item key="/" icon={<HomeOutlined/>}>
-                    <Link to='/'>
-                        Home
-                    </Link>
-                </Menu.Item>
-                <Menu.Item key="tasks" icon={<AppstoreOutlined/>}>
-                    <Link to='tasks'>
-                        Tasks
-                    </Link>
-                </Menu.Item>
-                <Menu.Item key="about">
-                    <Link to='about'>
-                        About Us
-                    </Link>
-                </Menu.Item>
+                <div className='container'>
+
+
+                    <Menu.Item key="/" icon={<HomeOutlined/>}>
+                        <Link to='/'>
+                            Home
+                        </Link>
+                    </Menu.Item>
+                    <Menu.Item key="tasks" icon={<AppstoreOutlined/>}>
+                        <Link to='tasks'>
+                            Tasks
+                        </Link>
+                    </Menu.Item>
+                    <Menu.Item key="about">
+                        <Link to='about'>
+                            About Us
+                        </Link>
+                    </Menu.Item>
+                </div>
             </Menu>
         </>
     );
