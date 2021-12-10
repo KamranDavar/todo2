@@ -1,4 +1,4 @@
-import {Menu} from 'antd';
+import {Affix, Menu} from 'antd';
 import {AppstoreOutlined, HomeOutlined} from '@ant-design/icons';
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
@@ -6,8 +6,9 @@ import {Link} from 'react-router-dom';
 export function Header() {
     const [current, setCurrent] = useState('/')
     return (
-        <>
-            <Menu onClick={(e) => setCurrent(e.key)} selectedKeys={[current]} mode="horizontal">
+        <Affix offsetTop={0}>
+            <Menu onClick={(e) => setCurrent(e.key)} selectedKeys={[current]} mode="horizontal"
+            className='header'>
                 <div className='container flex'>
                     <Menu.Item key="/" icon={<HomeOutlined/>}>
                         <Link to='/'>
@@ -26,6 +27,6 @@ export function Header() {
                     </Menu.Item>
                 </div>
             </Menu>
-        </>
+        </Affix>
     );
 }

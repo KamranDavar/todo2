@@ -29,7 +29,8 @@ export function Tasks() {
     }
 
 
-    return (<Row className='tasks'>
+    return (<Row className='tasks paper container'>
+
             {renderBreadcrumb()}
             <div className='title-row'>
                 <Typography.Title level={3}>Tasks</Typography.Title>

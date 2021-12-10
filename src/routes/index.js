@@ -1,6 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Content, Header} from '../components/layout';
-import {About, Error404, Home, Tasks} from '../pages';
+import {About, Error404, Tasks} from '../pages';
+import Home from '../pages/Home/index';
 import {View} from '../components/crud';
 
 export default function Router() {
