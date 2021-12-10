@@ -8,9 +8,7 @@ export function Header() {
     return (
         <>
             <Menu onClick={(e) => setCurrent(e.key)} selectedKeys={[current]} mode="horizontal">
-                <div className='container'>
-
-
+                <div className='container flex'>
                     <Menu.Item key="/" icon={<HomeOutlined/>}>
                         <Link to='/'>
                             Home

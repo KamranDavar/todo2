@@ -11,6 +11,7 @@ body {
   background-color: @component-background;
   margin: 1rem;
   padding: 1rem;
+
 }
 
 ///////////////////////////////////////////////////////display
@@ -28,6 +29,13 @@ body {
 
 .flex {
   display: flex;
+}
+//////////////////////////////////////////////////////float
+.float-right{
+  float: right;
+}
+.float-left{
+  float: left;
 }
 
 ///////////////////////////////////////////////////////text align
@@ -308,10 +316,8 @@ body {
 
 .container {
   width: 100%;
-  display: flex;
   align-self: center;
   margin: auto;
-
 }
 
 .make-container(@minWidth, @breakpoint) {

@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Content, Header} from '../components/layout';
 import {About, Error404, Home, Tasks} from '../pages';
-import {Form, View} from '../components/crud';
+import {View} from '../components/crud';
 
 export default function Router() {
     return <>
@@ -12,8 +12,6 @@ export default function Router() {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/about" element={<About/>}/>
                     <Route path="/tasks/" element={<Tasks/>}/>
-                    <Route path="/tasks/form" element={<Form/>}/>
-                    <Route path="/tasks/form/:id" element={<Form/>}/>
                     <Route path="/tasks/view/:id" element={<View/>}/>
                     <Route element={<Error404/>}/>
                 </Routes>

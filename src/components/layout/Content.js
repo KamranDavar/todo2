@@ -1,5 +1,7 @@
 export function Content({children}) {
-    return (<div className='container paper'>
+    return (
+        <div className='container paper '>
+        {/*<div className='container paper'>*/}
             {children}
         </div>
     );

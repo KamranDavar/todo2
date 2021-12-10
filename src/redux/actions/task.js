@@ -95,6 +95,7 @@ export const createTask = (data = {}) => async (dispatch) => {
     try {
         const response = await TaskService.create(data);
         dispatch(createTaskSuccess(response.data));
+        dispatch(getTasks())//refresh list after submit form
         notification.success({
             message: 'Task Created',
         });
@@ -132,6 +133,7 @@ export const editTask = (data, id) => async (dispatch) => {
     try {
         const response = await TaskService.update(id, data)
         dispatch(editTaskSuccess(response.data));
+        dispatch(getTasks())//refresh list after submit form
         notification.success({
             message: 'Task Edited',
         });
