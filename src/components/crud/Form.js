@@ -1,8 +1,9 @@
-import {Checkbox, Form, Input, Modal, Select, Spin} from 'antd';
+import {Checkbox, DatePicker, Form, Input, Modal, Select, Spin} from 'antd';
 import {useMediaQuery} from 'react-responsive';
 import {useDispatch, useSelector} from 'react-redux';
 import {useEffect} from 'react';
 import {createTask, editTask, getTask} from '../../redux/actions/task';
+import moment from 'moment';
 
 
 export function ModalForm({visible, id, methods}) {
@@ -24,7 +25,9 @@ export function ModalForm({visible, id, methods}) {
 
     useEffect(() => {//// for reInitial form
         if (id) {
-            form.setFieldsValue(data)
+            form.setFieldsValue({...data,
+                createdAt: moment(data.createdAt)
+            })
         }
     }, [data])
 
@@ -32,11 +35,11 @@ export function ModalForm({visible, id, methods}) {
     const buttonLabel = id ? "Update" : "Create"
 
     const onFinish = (data) => {
+        data.createdAt= data.createdAt.format('DD.MM.YYYY HH:mm')
         id ? dispatch(editTask(data, id)) : dispatch(createTask(data));
     }
 
     console.log('visible', visible)
-    console.log('id', id)
     return (<>
             <Modal
                 visible={visible}
@@ -63,7 +66,11 @@ export function ModalForm({visible, id, methods}) {
                     form={form}
                     layout="vertical"
                     name="form_in_modal"
-                    initialValues={id ? data : {}}
+                    initialValues={id ?
+                        {...data,
+                        createdAt: moment(data.createdAt)
+                        }
+                        : {}}
                 >
                     <Form.Item
                         name="title"
@@ -77,7 +84,7 @@ export function ModalForm({visible, id, methods}) {
                     >
                         <Input/>
                     </Form.Item>
-                    <Form.Item name="description" label="Description">
+                    <Form.Item name="desc" label="Description">
                         <Input.TextArea type="textarea"/>
                     </Form.Item>
                     <Form.Item name='tags' label="Tags">
@@ -86,6 +93,9 @@ export function ModalForm({visible, id, methods}) {
                             dropdownStyle={{height: "0", padding: "0"}}
                             placeholder="type a tag, press enter and type another one"
                         />
+                    </Form.Item>
+                    <Form.Item name='createdAt' label="Create Date" initialValue={data.createdAt} >
+                        <DatePicker  showTime={{ format: 'HH:mm' }}  format="YYYY-MM-DD HH:mm"  />
                     </Form.Item>
                     <Form.Item name="flag" label="Done">
                         <Checkbox defaultChecked={data.flag} />

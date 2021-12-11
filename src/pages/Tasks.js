@@ -62,17 +62,13 @@ export function Tasks() {
                             >
                                 <List.Item.Meta
                                     title={item.title}
-                                    description={<>
-                                        <Row className='mb10'> it is an absolute controlled component and has no
-                                            uncontrolled mode
-                                        </Row>
+                                    description={
                                         <Row>
                                             {item.tags.map((item) =>
                                                 <Tag>{item}</Tag>)}
                                         </Row>
-                                    </>}
+                                    }
                                 />
-
                             </List.Item>
                         </div>
                     )}
