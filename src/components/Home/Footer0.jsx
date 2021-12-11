@@ -2,7 +2,7 @@ import React from 'react';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
-class Footer extends React.PureComponent {
+export class Footer0 extends React.PureComponent {
   render() {
     const { ...props } = this.props;
     const { dataSource } = props;
@@ -24,4 +24,3 @@ class Footer extends React.PureComponent {
   }
 }
 
-export default Footer;

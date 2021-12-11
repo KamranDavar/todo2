@@ -4,7 +4,7 @@ import { Row, Col } from 'antd';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import { getChildrenToRender } from './utils';
 
-class Content extends React.PureComponent {
+export class Content0 extends React.PureComponent {
   render() {
     const { dataSource, isMobile, ...props } = this.props;
     const {
@@ -46,4 +46,3 @@ class Content extends React.PureComponent {
   }
 }
 
-export default Content;
