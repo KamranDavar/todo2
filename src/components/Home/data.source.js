@@ -20,19 +20,14 @@ export const Banner10DataSource = {
                 bg: {className: 'bg bg0'},
                 title: {
                     className: 'banner1-title',
-                    children: (
-                        <h3>
-                            <b>Business&nbsp;LOGO</b>
-                        </h3>
-                    ),
+                    children: (<h1>Datin</h1>),
                 },
                 content: {
                     className: 'banner1-content',
                     children: (
-                        <p>myslogan</p>
+                        <p> Online insurance comparison and purchase system</p>
                     ),
                 },
-                button: {className: 'banner1-button', children: 'Learn More'},
             },
         ],
     },
@@ -43,14 +38,10 @@ export const Content00DataSource = {
     OverPack: {playScale: 0.3, className: ''},
     titleWrapper: {
         className: 'title-wrapper',
-        children: [
-            {
-                name: 'title',
-                children: (
-                    <p>Lorem Ipsum is simply dummy</p>
-                ),
-            },
-        ],
+        children: [{
+            name: 'title',
+            children: (<h2>Lorem Ipsum is simply dummy</h2>),
+        },],
     },
     childWrapper: {
         className: 'content0-block-wrapper',
@@ -72,9 +63,7 @@ export const Content00DataSource = {
                         {
                             name: 'title',
                             className: 'content0-block-title',
-                            children: (
-                                <p>Lorem Ipsum</p>
-                            ),
+                            children: (<h4>Lorem Ipsum</h4>),
                         },
                         {
                             name: 'content',
@@ -102,17 +91,11 @@ export const Content00DataSource = {
                         {
                             name: 'title',
                             className: 'content0-block-title',
-                            children: (
-                                <span>
-                  <p>Lorem Ipsum</p>
-                </span>
-                            ),
+                            children: (<h4>Lorem Ipsum</h4>),
                         },
                         {
                             name: 'content',
-                            children: (
-                                <p>Lorem Ipsum is simply dummy text of the</p>
-                            ),
+                            children: (<p>Lorem Ipsum is simply dummy text of the</p>),
                         },
                     ],
                 },
@@ -135,18 +118,12 @@ export const Content00DataSource = {
                             name: 'title',
                             className: 'content0-block-title',
                             children: (
-                                <span>
-                  <p>Lorem Ipsum</p>
-                </span>
+                                <h4>Lorem Ipsum</h4>
                             ),
                         },
                         {
                             name: 'content',
-                            children: (
-                                <span>
-                  <p>Lorem Ipsum is simply dummy text of the</p>
-                </span>
-                            ),
+                            children: (<p>Lorem Ipsum is simply dummy text of the</p>),
                         },
                     ],
                 },
@@ -165,29 +142,23 @@ export const Content10DataSource = {
     title: {
         className: 'content1-title',
         children: (
-            <span>
-        <p>Lorem Ipsum </p>
-      </span>
+            <h2>Lorem Ipsum </h2>
         ),
     },
     content: {
         className: 'content1-content',
         children: (
-            <span>
-        <span>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.<br/>
-          </p>
-        </span>
-      </span>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has survived not
+                only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s
+                with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus
+                PageMaker including versions of Lorem Ipsum.<br/>
+            </p>
         ),
     },
 };
@@ -200,23 +171,8 @@ export const Content30DataSource = {
         children: [
             {
                 name: 'title',
-                children: (
-                    <span>
-            <p>Where does it come from?</p>
-          </span>
-                ),
+                children: (<h2>Where does it come from?</h2>),
                 className: 'title-h1',
-            },
-            {
-                name: 'content',
-                className: 'title-content',
-                children: (
-                    <span>
-            <p>
-              <br/>
-            </p>
-          </span>
-                ),
             },
         ],
     },
@@ -237,26 +193,14 @@ export const Content30DataSource = {
                     textWrapper: {className: 'content3-text'},
                     title: {
                         className: 'content3-title',
-                        children: (
-                            <span>
-                <span>
-                  <span>
-                    <p>Lorem Ipsum</p>
-                  </span>
-                </span>
-              </span>
-                        ),
+                        children: (<h4>Lorem Ipsum</h4>),
                     },
                     content: {
                         className: 'content3-content',
-                        children: (
-                            <span>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.&nbsp;
-                </p>
-              </span>
-                        ),
+                        children: (<p>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.
+                        </p>),
                     },
                 },
             },
@@ -275,20 +219,16 @@ export const Content30DataSource = {
                     title: {
                         className: 'content3-title',
                         children: (
-                            <span>
-                <p>Lorem Ipsum</p>
-              </span>
+                            <h4>Lorem Ipsum</h4>
                         ),
                     },
                     content: {
                         className: 'content3-content',
                         children: (
-                            <span>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.{' '}
-                </p>
-              </span>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry.
+                            </p>
                         ),
                     },
                 },
@@ -307,21 +247,15 @@ export const Content30DataSource = {
                     title: {
                         className: 'content3-title',
                         children: (
-                            <span>
-                <p>Lorem Ipsum</p>
-              </span>
+                            <h4>Lorem Ipsum</h4>
                         ),
                     },
                     content: {
                         className: 'content3-content',
-                        children: (
-                            <span>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.{' '}
-                </p>
-              </span>
-                        ),
+                        children: (<p>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.{' '}
+                        </p>),
                     },
                 },
             },
@@ -333,31 +267,21 @@ export const Content30DataSource = {
                 children: {
                     icon: {
                         className: 'content3-icon',
-                        children:Fingerprint ,
+                        children: Fingerprint,
                     },
                     textWrapper: {className: 'content3-text'},
                     title: {
                         className: 'content3-title',
                         children: (
-                            <span>
-                <p>Lorem Ipsum</p>
-              </span>
+                            <h4>Lorem Ipsum</h4>
                         ),
                     },
                     content: {
                         className: 'content3-content',
-                        children: (
-                            <span>
-                <span>
-                  <span>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.{' '}
-                    </p>
-                  </span>
-                </span>
-              </span>
-                        ),
+                        children: (<p>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.{' '}
+                        </p>),
                     },
                 },
             },
@@ -369,16 +293,12 @@ export const Content30DataSource = {
                 children: {
                     icon: {
                         className: 'content3-icon',
-                        children:arrowSvg,
+                        children: arrowSvg,
                     },
                     textWrapper: {className: 'content3-text'},
                     title: {
                         className: 'content3-title',
-                        children: (
-                            <span>
-                <p>Lorem Ipsum</p>
-              </span>
-                        ),
+                        children: (<h4>Lorem Ipsum</h4>),
                     },
                     content: {
                         className: 'content3-content',
@@ -404,21 +324,13 @@ export const Content30DataSource = {
                     textWrapper: {className: 'content3-text'},
                     title: {
                         className: 'content3-title',
-                        children: (
-                            <span>
-                <p>Lorem Ipsum</p>
-              </span>
-                        ),
+                        children: (<h4>Lorem Ipsum</h4>),
                     },
                     content: {
                         className: 'content3-content',
-                        children: (
-                            <span>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.{' '}
-                </p>
-              </span>
+                        children: (<p>
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry.</p>
                         ),
                     },
                 },

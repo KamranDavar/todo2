@@ -39,9 +39,7 @@ export class Banner1 extends React.PureComponent {
             <div key="content" {...content}>
               {content.children}
             </div>
-            <Button ghost key="button" {...button}>
-              {button.children}
-            </Button>
+
           </QueueAnim>
         </Element>
       );

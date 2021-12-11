@@ -12,7 +12,6 @@ import {
     Content30DataSource,
     Footer00DataSource,
 } from '../components/Home/data.source';
-// import '../assets/styles/pages/Home/index.less';
 
 let isMobile;
 enquireScreen((b) => {

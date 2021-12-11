@@ -1,6 +1,6 @@
 import {Breadcrumb, Button, Col, Divider, List, Row, Tag, Typography} from 'antd';
 import {Link} from 'react-router-dom';
-import {CheckOutlined, HomeOutlined, PlusOutlined} from '@ant-design/icons';
+import {CheckCircleTwoTone, HomeOutlined, PlusOutlined} from '@ant-design/icons';
 import {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getTasks} from '../redux/actions/task';
@@ -47,7 +47,6 @@ export function Tasks() {
                     renderItem={item => (
                         <div key={item.id}>
                             <List.Item
-
                                 actions={
                                     [<Button
                                         onClick={() => {
@@ -55,8 +54,13 @@ export function Tasks() {
                                             setId(item.id)
                                         }}
                                     >edit</Button>,
-                                        <Link to={`view/${item.id}`}>view</Link>,
-                                        item.flag ? <CheckOutlined/> : null
+
+                                        <Link to={`view/${item.id}`}>
+                                            <Button>
+                                                view
+                                            </Button>
+                                        </Link>,
+                                        item.flag ? <CheckCircleTwoTone twoToneColor="#52c41a" style={{fontSize:'1.5rem'}}/> : null
                                     ]
                                 }
                             >
