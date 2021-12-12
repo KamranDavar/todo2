@@ -6,7 +6,7 @@ import arrowSvg from '../../assets/svg/212-arrow-1-rounded.svg'
 import Fingerprint from '../../assets/svg/500-fingerprint-security-outline.svg'
 import stars from '../../assets/svg/1865-shooting-stars-outline.svg'
 import GiftSvg from '../../assets/svg/412-gift-outline.svg'
-import CryptoSvg from '../../assets/svg/undraw_crypto_flowers_re_dyqo.svg'
+import CryptoSvg from '../../assets/svg/undraw_campfire_re_9chj.svg'
 
 
 export const Banner10DataSource = {

@@ -1,5 +1,4 @@
 import {Checkbox, DatePicker, Form, Input, Modal, Select, Spin} from 'antd';
-import {useMediaQuery} from 'react-responsive';
 import {useDispatch, useSelector} from 'react-redux';
 import {useEffect} from 'react';
 import {createTask, editTask, getTask} from '../../redux/actions/task';
@@ -10,6 +9,8 @@ export function ModalForm({visible, id, methods}) {
     const [form] = Form.useForm();
     const dispatch = useDispatch()
     const {data, loading} = useSelector(state => state.task.getSingle)
+    const {loading: postLoading} = useSelector(state => state.task.post)
+    const {loading: patchLoading} = useSelector(state => state.task.patch)
 
 
     useEffect(() => {// for get form data
@@ -18,14 +19,14 @@ export function ModalForm({visible, id, methods}) {
         }
     }, [id])
     useEffect(() => {// for open create form without data
-        if (id === null) {
-            form.resetFields();
-        }
+        form.resetFields();
+        console.log("form.resetFields()", form.getFieldsValue())
     }, [visible])
 
     useEffect(() => {//// for reInitial form
         if (id) {
-            form.setFieldsValue({...data,
+            form.setFieldsValue({
+                ...data,
                 createdAt: moment(data.createdAt)
             })
         }
@@ -33,9 +34,10 @@ export function ModalForm({visible, id, methods}) {
 
     const title = id ? "Update Task" : "Add a new Task"
     const buttonLabel = id ? "Update" : "Create"
+    const buttonLoading = id ? patchLoading : postLoading
 
     const onFinish = (data) => {
-        data.createdAt= data.createdAt.format('DD.MM.YYYY HH:mm')
+        data.createdAt = data.createdAt.format('DD.MM.YYYY HH:mm')
         id ? dispatch(editTask(data, id)) : dispatch(createTask(data));
     }
 
@@ -44,7 +46,7 @@ export function ModalForm({visible, id, methods}) {
             <Modal
                 visible={visible}
                 title={title}
-                okText={buttonLabel}
+                okText={buttonLoading ? <Spin/> : buttonLabel}
                 cancelText="Cancel"
                 onCancel={() => {
                     methods.setVisible(false);
@@ -67,8 +69,9 @@ export function ModalForm({visible, id, methods}) {
                     layout="vertical"
                     name="form_in_modal"
                     initialValues={id ?
-                        {...data,
-                        createdAt: moment(data.createdAt)
+                        {
+                            ...data,
+                            createdAt: moment(data.createdAt)
                         }
                         : {}}
                 >
@@ -78,13 +81,28 @@ export function ModalForm({visible, id, methods}) {
                         rules={[
                             {
                                 required: true,
-                                message: 'Please input the title of collection!',
+                                message: 'Please input the title of task!',
+                            },
+                            {
+                                min: 5,
+                                message: 'description should be more than 5 char!',
+                            },
+                            {
+                                max: 20,
+                                message: 'description should be less than 25 char!',
                             },
                         ]}
                     >
                         <Input/>
                     </Form.Item>
-                    <Form.Item name="desc" label="Description">
+                    <Form.Item name="desc" label="Description"
+                               rules={[
+                                   {
+                                       max: 1024,
+                                       message: 'description should be less than 1024 char!',
+                                   },
+                               ]}
+                    >
                         <Input.TextArea type="textarea"/>
                     </Form.Item>
                     <Form.Item name='tags' label="Tags">
@@ -94,11 +112,11 @@ export function ModalForm({visible, id, methods}) {
                             placeholder="type a tag, press enter and type another one"
                         />
                     </Form.Item>
-                    <Form.Item name='createdAt' label="Create Date" initialValue={data.createdAt} >
-                        <DatePicker  showTime={{ format: 'HH:mm' }}  format="YYYY-MM-DD HH:mm"  />
+                    <Form.Item name='createdAt' label="Create Date">
+                        <DatePicker showTime={{format: 'HH:mm'}} format="YYYY-MM-DD HH:mm"/>
                     </Form.Item>
                     <Form.Item name="flag" label="Done">
-                        <Checkbox defaultChecked={data.flag} />
+                        <Checkbox defaultChecked={data.flag}/>
                     </Form.Item>
                 </Form>}
 

@@ -29,7 +29,7 @@ export function Tasks() {
     }
 
 
-    return (<Row className='tasks paper container'>
+    return (<Row className='tasks paper mdContainer'>
 
             {renderBreadcrumb()}
             <div className='title-row'>
@@ -39,7 +39,7 @@ export function Tasks() {
                     type='primary'> <PlusOutlined/>Create new</Button>
 
             </div>
-            <Col xs={24}>
+            <Col xs={24} className='striped-list' >
                 <List
                     itemLayout="horizontal"
                     loading={loading}

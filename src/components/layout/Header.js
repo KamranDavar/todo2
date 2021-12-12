@@ -8,8 +8,7 @@ export function Header() {
     return (
         <Affix offsetTop={0}>
             <Menu onClick={(e) => setCurrent(e.key)} selectedKeys={[current]} mode="horizontal"
-            className='header'>
-                <div className='container flex'>
+            className='header flex'>
                     <Menu.Item key="/" icon={<HomeOutlined/>}>
                         <Link to='/'>
                             Home
@@ -25,7 +24,6 @@ export function Header() {
                             About Us
                         </Link>
                     </Menu.Item>
-                </div>
             </Menu>
         </Affix>
     );

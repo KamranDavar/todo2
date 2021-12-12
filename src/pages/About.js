@@ -4,6 +4,9 @@ import React from 'react';
 import {enquireScreen} from 'enquire-js';
 import {Content1} from '../components/Home';
 import CryptoSvg from '../assets/svg/undraw_crypto_flowers_re_dyqo.svg';
+import {Breadcrumb, Col, Divider} from 'antd';
+import {Link} from 'react-router-dom';
+import {HomeOutlined} from '@ant-design/icons';
 
 export const Content10DataSource = {
     wrapper: {className: 'home-page-wrapper about-wrapper'},
@@ -68,6 +71,18 @@ export class About extends React.Component {
         }
     }
 
+     renderBreadcrumb = () => {
+        return !isMobile ? <Col xs={24}> <Breadcrumb>
+            <Breadcrumb.Item>
+                <Link to={'/'}><HomeOutlined/></Link>
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>
+                <span>About</span>
+            </Breadcrumb.Item>
+        </Breadcrumb><Divider/> </Col> : null
+    }
+
+
     render() {
         const children = [
             <Content1
@@ -77,15 +92,18 @@ export class About extends React.Component {
                 isMobile={this.state.isMobile}
             />
         ];
-        return (
+        return (<>
+
             <div
-                className="templates-wrapper container paper"
+                className="templates-wrapper container paper "
                 ref={(d) => {
                     this.dom = d;
                 }}
             >
+                {this.renderBreadcrumb()}
                 {this.state.show && children}
             </div>
+            </>
         );
     }
 }

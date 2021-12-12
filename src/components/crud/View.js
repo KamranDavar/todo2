@@ -17,7 +17,7 @@ export function View() {
         dispatch(getTask(id))
     }, [])
     console.log('data', data)
-    return (<div className='paper container'>
+    return (<div className='paper mdContainer'>
             {loading ? <Spin/> :
                 <>
                     <Typography.Title level={3}>
