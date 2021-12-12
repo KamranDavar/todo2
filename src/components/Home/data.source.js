@@ -40,7 +40,7 @@ export const Content00DataSource = {
         className: 'title-wrapper',
         children: [{
             name: 'title',
-            children: (<h2>Lorem Ipsum is simply dummy</h2>),
+            children: (<span>Lorem Ipsum is simply dummy</span>),
         },],
     },
     childWrapper: {
@@ -63,7 +63,7 @@ export const Content00DataSource = {
                         {
                             name: 'title',
                             className: 'content0-block-title',
-                            children: (<h4>Lorem Ipsum</h4>),
+                            children: (<span>Lorem Ipsum</span>),
                         },
                         {
                             name: 'content',
@@ -91,7 +91,7 @@ export const Content00DataSource = {
                         {
                             name: 'title',
                             className: 'content0-block-title',
-                            children: (<h4>Lorem Ipsum</h4>),
+                            children: (<span>Lorem Ipsum</span>),
                         },
                         {
                             name: 'content',
@@ -118,7 +118,7 @@ export const Content00DataSource = {
                             name: 'title',
                             className: 'content0-block-title',
                             children: (
-                                <h4>Lorem Ipsum</h4>
+                                <span>Lorem Ipsum</span>
                             ),
                         },
                         {
@@ -142,7 +142,7 @@ export const Content10DataSource = {
     title: {
         className: 'content1-title',
         children: (
-            <h2>Lorem Ipsum </h2>
+            <span>Lorem Ipsum </span>
         ),
     },
     content: {
@@ -171,7 +171,7 @@ export const Content30DataSource = {
         children: [
             {
                 name: 'title',
-                children: (<h2>Where does it come from?</h2>),
+                children: (<span>Where does it come from?</span>),
                 className: 'title-h1',
             },
         ],
@@ -193,7 +193,7 @@ export const Content30DataSource = {
                     textWrapper: {className: 'content3-text'},
                     title: {
                         className: 'content3-title',
-                        children: (<h4>Lorem Ipsum</h4>),
+                        children: (<span>Lorem Ipsum</span>),
                     },
                     content: {
                         className: 'content3-content',
@@ -219,7 +219,7 @@ export const Content30DataSource = {
                     title: {
                         className: 'content3-title',
                         children: (
-                            <h4>Lorem Ipsum</h4>
+                            <span>Lorem Ipsum</span>
                         ),
                     },
                     content: {
@@ -247,7 +247,7 @@ export const Content30DataSource = {
                     title: {
                         className: 'content3-title',
                         children: (
-                            <h4>Lorem Ipsum</h4>
+                            <span>Lorem Ipsum</span>
                         ),
                     },
                     content: {
@@ -273,7 +273,7 @@ export const Content30DataSource = {
                     title: {
                         className: 'content3-title',
                         children: (
-                            <h4>Lorem Ipsum</h4>
+                            <span>Lorem Ipsum</span>
                         ),
                     },
                     content: {
@@ -298,7 +298,7 @@ export const Content30DataSource = {
                     textWrapper: {className: 'content3-text'},
                     title: {
                         className: 'content3-title',
-                        children: (<h4>Lorem Ipsum</h4>),
+                        children: (<span>Lorem Ipsum</span>),
                     },
                     content: {
                         className: 'content3-content',
@@ -324,7 +324,7 @@ export const Content30DataSource = {
                     textWrapper: {className: 'content3-text'},
                     title: {
                         className: 'content3-title',
-                        children: (<h4>Lorem Ipsum</h4>),
+                        children: (<span>Lorem Ipsum</span>),
                     },
                     content: {
                         className: 'content3-content',

@@ -68,8 +68,8 @@ export function Tasks() {
                                     title={item.title}
                                     description={
                                         <Row>
-                                            {item.tags.map((item) =>
-                                                <Tag>{item}</Tag>)}
+                                            {item.tags.map((item,index) =>
+                                                <Tag key={index}>{item}</Tag>)}
                                         </Row>
                                     }
                                 />

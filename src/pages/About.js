@@ -95,7 +95,7 @@ export class About extends React.Component {
         return (<>
 
             <div
-                className="templates-wrapper container paper "
+                className="templates-wrapper container paper about "
                 ref={(d) => {
                     this.dom = d;
                 }}

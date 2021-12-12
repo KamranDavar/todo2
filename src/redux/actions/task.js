@@ -29,10 +29,6 @@ export const getTasks = () => async (dispatch) => {
         dispatch(getTasksSuccess(response.data));
     } catch (error) {
         dispatch(getTasksFail(error));
-        notification.warning({
-            message: 'Get Tasks',
-            description: error.message,
-        });
     }
 };
 
@@ -64,9 +60,7 @@ export const getTask = (id) => async (dispatch) => {
     } catch (error) {
         console.log(error);
         dispatch(getTaskFail(error));
-        notification.warning({
-            description: error.message,
-        });
+
     }
 };
 
@@ -102,9 +96,6 @@ export const createTask = (data = {}) => async (dispatch) => {
     } catch (error) {
         console.log(error);
         dispatch(createTaskFail(error));
-        notification.warning({
-            description: error.message,
-        });
     }
 };
 
@@ -140,8 +131,5 @@ export const editTask = (data, id) => async (dispatch) => {
     } catch (error) {
         console.log(error);
         dispatch(editTaskFail(error));
-        notification.warning({
-            description: error.message,
-        });
     }
 };
